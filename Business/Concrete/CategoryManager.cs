@@ -45,6 +45,7 @@ namespace Business.Concrete
 
         public void UpdateCategory(Category category)
         {
+             _categoryDal.Update(category);
 
         }
     }

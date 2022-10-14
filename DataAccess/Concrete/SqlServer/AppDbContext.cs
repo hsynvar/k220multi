@@ -14,9 +14,18 @@ namespace DataAccess.Concrete.SqlServer
     {
        protected override void OnConfiguring (DbContextOptionsBuilder builder)
        {
-        builder.UseSqlServer("Server=localhost,1433;Initial Catalog=FruitkaProject;Persist Security Info=False;User Id=sa;Password=rena12345;MultipleActiveResultSets=true;");
+        builder.UseSqlServer("Server=localhost,1433;Initial Catalog=multishop;Persist Security Info=False;User Id=sa;Password=rena12345;MultipleActiveResultSets=true;");
        
        }
+    // public AppDbContext(DbContextOptions options) : base(options)
+    // {
+
+    // }
+    public AppDbContext()
+    {
+        
+    }
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
         public DbSet<CategorySub> CategorySubs { get; set; }
